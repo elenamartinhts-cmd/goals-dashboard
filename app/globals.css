@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --hot-primary:       #7B2D3E;
+  --hot-primary-light: #F5E0E4;
+  --hot-primary-dark:  #5A1E2B;
+  --hot-accent:        #D4A853;
+  --hot-bg:            #FAF5F6;
+  --hot-surface:       #FFFFFF;
+  --hot-text:          #2A1018;
+  --hot-text-2:        #6B3045;
+  --hot-muted:         #9E7882;
+  --hot-success:       #4A9B6F;
+  --hot-danger:        #C44B3D;
+  --hot-warning:       #E09530;
+  --hot-border:        #E8D6DA;
+}
+
+.dark {
+  --hot-bg:      #1A0D10;
+  --hot-surface: #241318;
+  --hot-text:    #F5EAEC;
+  --hot-text-2:  #C4979F;
+  --hot-muted:   #7A5260;
+  --hot-border:  #3D1E25;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+body {
+  background-color: var(--hot-bg);
+  color: var(--hot-text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+/* Safe area insets for notched phones */
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+.safe-top    { padding-top: env(safe-area-inset-top); }
+
+/* Progress bar */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.commission-bar {
+  background: linear-gradient(90deg, var(--hot-primary), var(--hot-accent), var(--hot-primary));
+  background-size: 200% 100%;
+}
+
+/* Pace badge */
+.badge-ahead   { background: #DCF0E5; color: #1A6B3D; }
+.badge-on-pace { background: #FFF3DC; color: #8A5200; }
+.badge-behind  { background: #FDDDD9; color: #8B1A10; }
+
+.dark .badge-ahead   { background: #1A3D28; color: #6FD4A0; }
+.dark .badge-on-pace { background: #3D2E00; color: #FFC04D; }
+.dark .badge-behind  { background: #3D100C; color: #F99080; }
+
+/* Smooth scrolling */
+.scroll-smooth { scroll-behavior: smooth; }
+
+/* Large tap targets */
+.tap-target { min-height: 48px; display: flex; align-items: center; }
