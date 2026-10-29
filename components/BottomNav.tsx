@@ -18,7 +18,7 @@ export default function BottomNav() {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 safe-bottom"
          style={{ background: 'var(--hot-surface)', borderTop: '1px solid var(--hot-border)' }}>
-      <div className="flex">
+      <div className="flex pb-9">
         {TABS.map(({ href, label, Icon }) => {
           const active = href === '/' ? path === '/' : path.startsWith(href);
           return (
